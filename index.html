@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Missing Marcell ❤️</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style type="text/css" media="screen">
+    body{
+      font-family: 'Roboto', sans-serif;
+      background: lime;
+    }
+    .container {text-align: center;}
+    #logo { border-radius: 50%; }
+    #countdown { font-size: 2em; margin-bottom: 1em;}
+  </style>
 </head>
 <body>
-  Missing Marcell
+  <div class="container">
+    <img src="./assets/praying_marcell.png" alt="Praying Marcell" id="logo"/>
+    <h1>Missing Marcell</h1>
+    <div id="countdown"></div>
+    <img src="./assets/cat.gif" alt="Djing Cat"/>
+  </div>
+  <script charset="utf-8" type="text/javascript">
+    CountDownTimer('06/18/2021 6:00 AM', 'countdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'HE\'S GONE :(';
+                return;
+            }
+
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + 'days ';
+            document.getElementById(id).innerHTML += hours + 'hrs ';
+            document.getElementById(id).innerHTML += minutes + 'mins ';
+            document.getElementById(id).innerHTML += seconds + 'secs';
+        }
+        timer = setInterval(showRemaining, 1000);
+    }
+  </script>
 </body>
 </html>
