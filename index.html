@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Missing Marcell ❤️</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <style type="text/css" media="screen">
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; margin: 0; }
@@ -16,35 +16,44 @@
   .container {
     color: #111;
     margin: 0 auto;
+    padding: 0 0.5em;
     text-align: center;
     height:100%;
     display: flex;
     flex-direction: column;
   }
+  .gone { display: none; padding: 1rem; }
   h1 { font-weight: normal; letter-spacing: .125rem; }
   li {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1em;
     list-style-type: none;
-    padding: 1em;
+    padding: 0.5em;
     text-transform: uppercase;
   }
   li span { display: block; font-size: 4.5rem; }
-  .gone { display: none; padding: 1rem; }
-  #logo {
+  footer {
+    flex-grow: 1;
+    display: flex;
+  }
+  #marcell {
     border-radius: 50%;
     width: 200px;
     padding: 1em;
     margin: 0 auto;
   }
+  #come_on_over_to_bcn {
+    width: 15em;
+    margin: 0 auto;
+    align-self: flex-end;
+  }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="./assets/praying_marcell.png" alt="Praying Marcell" id="logo"/>
+    <img src="./assets/praying_marcell.png" alt="Praying Marcell" id="marcell"/>
 
     <h1 id="headline">Marcell is nice<br/>We're gonna miss Marcell</h1>
-
     <div id="countdown">
       <ul>
         <li><span id="days"></span>days</li>
@@ -57,10 +66,10 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <img src="./assets/travolta.gif" alt="Travolta" id="come_on_over_to_bcn"/>
-
+    <footer>
+      <img src="./assets/travolta.gif" id="come_on_over_to_bcn"/>
+    </footer>
     </div> <!-- container -->
-
 
     <script charset="utf-8" type="text/javascript">
     (function () {
